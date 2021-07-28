@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{
+      background-color: seagreen;
+    }
+    .im{
+      position: relative;
+      top:50px
+    }
+    .bt1{
+      position: relative;
+      width: 250px;
+      height: 30px;
+      left: 1px;
+      border-radius: 5px;
+      color: black;
+    }
+    .bt2{
+      position: relative;
+      width: 80px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: sienna;
+    }
+    .out{
+      position: relative;
+      top:90px;
+      width: 20%;
+    }
+      
+  </style>
+</head>
+<body>
+  <center>
+    <h2> COVID DETECTION USING XRAY IMAGES</h2>
+    
+    <form class = "im" method="post" action="">
+        {% csrf_token %}
+        <p>Click on the "Choose File" button to upload a file:</p>
+      <input  class = "bt1" type="file" id="myFile" name="filename" onchange="loadFile(event)">
+      <input  class = "bt2" type="submit">
+        <h3>PREDICTIONS and PROBABLITY</h3>
+        <h2>{{res}}</h2>
+        <img class = "out" id="output"/>
+    </form>
+    
+</center>
+  <script>
+  var loadFile = function(event) {
+      var output = document.getElementById('output');
+      output.src = URL.createObjectURL(event.target.files[0]);
+      output.onload = function() {
+      URL.revokeObjectURL(output.src) // free memory
+      }
+  };
+ </script>
+</div>
+</body>
+</html>

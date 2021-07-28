@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .out{
+            position: relative;
+            top:100px;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+<input  class = "output" type="file" accept="image/*" onchange="loadFile(event)">
+<center>
+    <img class = "out" id="output"/>
+    <script>
+    var loadFile = function(event) {
+        var output = document.getElementById('output');
+        output.src = URL.createObjectURL(event.target.files[0]);
+        output.onload = function() {
+        URL.revokeObjectURL(output.src) // free memory
+        }
+    };
+   </script>
+</center>
+</body>
+</html>
