@@ -19,3 +19,12 @@ Backend: Django
 homepage:
 ![hompage](https://user-images.githubusercontent.com/70704151/127347632-9139fa3e-d284-44f9-959d-fd70bb8a42a5.PNG)
 
+working:
+
+![pic](https://user-images.githubusercontent.com/70704151/127352413-a690cb9c-b03e-459a-b47e-f2d5dd8be5c0.PNG)
+
+![res](https://user-images.githubusercontent.com/70704151/127352426-5036c8ee-3d3d-4b1c-a1a6-815518e34446.PNG)
+
+
+# Note:
+Result are predictions only not final dignosis result
