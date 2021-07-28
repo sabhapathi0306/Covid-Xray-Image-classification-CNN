@@ -27,4 +27,4 @@ working:
 
 
 # Note:
-Result are predictions only not final dignosis result
+Result are predictions only not final diagnosis result
